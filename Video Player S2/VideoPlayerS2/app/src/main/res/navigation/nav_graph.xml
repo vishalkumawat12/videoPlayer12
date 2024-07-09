@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.videoplayers2.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fileFragment"
+        android:name="com.example.videoplayers2.fragments.FileFragment"
+        android:label="fragment_file"
+        tools:layout="@layout/fragment_file" >
+        <action
+            android:id="@+id/action_fileFragment_to_playerActivity"
+            app:destination="@id/playerActivity" />
+        <action
+            android:id="@+id/action_fileFragment_to_playerActivity2"
+            app:destination="@id/playerActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.videoplayers2.fragments.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_videoFragment_to_playerActivity"
+            app:destination="@id/playerActivity" />
+        <action
+            android:id="@+id/action_videoFragment_to_playerActivity2"
+            app:destination="@id/playerActivity2" />
+    </fragment>
+    <activity
+        android:id="@+id/playerActivity"
+        android:name="com.example.videoplayers2.activities.PlayerActivity"
+        android:label="activity_player"
+        tools:layout="@layout/activity_player" />
+    <activity
+        android:id="@+id/playerActivity2"
+        android:name="com.example.videoplayers2.activities.PlayerActivity2"
+        android:label="activity_player2"
+        tools:layout="@layout/activity_player2" />
+</navigation>
